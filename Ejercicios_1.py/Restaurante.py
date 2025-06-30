@@ -3,7 +3,7 @@ menu = {"Ensalada mixta" : 12,
           "Dorada al horno" : 18,
            "Arroz al curry" : 14,
             "Lasaña de carne" : 15,
-              "Brwnie de chocolate" : 8,
+              "Brownie de chocolate" : 8,
                 "Helado" : 6,
                  "Refrescos" : 5.5,
                    "Café" : 3.5 } # (menu = {}) crea un diccionario en el cual esta integrados todos los platos y sus precios
