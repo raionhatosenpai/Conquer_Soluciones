@@ -4,7 +4,7 @@ array_ceros = np.zeros(8)
 print("Array de ceros:", array_ceros)
 
 # Poner todos los elementos a 2
-array_ceros.fill(2)
+array_ceros[:] = 2 # tambien es valido array_ceros.fill(2)
 print("\nArray de ceros modificado:", array_ceros)
 
 # Array con pares del 1 al 10
