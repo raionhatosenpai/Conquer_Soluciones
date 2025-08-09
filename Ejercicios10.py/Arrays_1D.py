@@ -22,11 +22,14 @@ print("\nSuma de elementos del array de pares (numpy):", suma_pares)
 
 # Revierte array_2 y guárdalo en una variable independiente.
 array_pares_invertido = array_pares[::-1] # también es válido np.flip(array_pares)
-print("\nArray de pares invertido:", array_pares_invertido)
+print("\nArray de pares vertido:", array_pares_invertido)
 
 # Elementos comunes
-elementos_comunes = np.intersect1d(array_ceros, array_pares_invertido)
+elementos_comunes = np.intersect1d(array_ceros, array_pares)
 print("\nElementos comunes entre array de ceros y array de pares:", elementos_comunes)
+
+elementos_comunes = np.intersect1d(array_pares, array_pares_invertido)
+print("\nElementos comunes entre array de pares y array de pares invertido:", elementos_comunes)
 
 # Crea un arrays lleno de 1s con una longitud dada por el usuario
 longitud = int(input("\nIntroduce la longitud del array de unos: "))
