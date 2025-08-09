@@ -6,11 +6,10 @@ array_unos = np.ones(longitud, dtype=int)
 print("\nArray de unos:", array_unos)
 
 # Cambia la forma del array para que tenga una estructura de tipo (filas, columnas)
-n = array_unos
-filas = 1
-columnas = 2
-if filas * columnas != n.size:
-    print("Dimensiones incompatibles. filas * columnas debe ser", n.size)
+filas = int(input("Introduce el número de filas: "))
+columnas = int(input("Introduce el número de columnas: "))
+if filas * columnas == longitud:
+    nuevo_array = np.reshape(array_unos, (filas, columnas))
+    print("\nArray de unos reestructurado (filas, columnas):", nuevo_array)
 else:
-    n = n.reshape(filas, columnas)
-print("\nArray de unos reestructurado (filas, columnas):", n)
+    print("Dimensiones incompatibles. filas * columnas debe ser", longitud)
