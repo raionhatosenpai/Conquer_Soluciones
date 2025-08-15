@@ -43,7 +43,7 @@ componentes = np.array([
 tipos, indices = np.unique(componentes[:, 1], return_inverse=True)
 max_indices = np.argmax(componentes[:, 3].astype(int), axis=0)
 tipo_max = tipos[indices[max_indices]]
-print("Tipo de componente con la puntuación más alta:", tipo_max, "con una puntuación de", componentes[max_indices, 3])
+print("Tipo de componente con la puntuación más alta es: (", tipo_max, ") con una puntuación de", componentes[max_indices, 3])
 
 # cuántos componentes se produjeron en cada mes
 fechas = np.array([fecha.split("-")[1] for fecha in componentes[:, 0]])
