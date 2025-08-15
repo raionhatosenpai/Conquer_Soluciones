@@ -28,5 +28,4 @@ montos_mes = np.zeros(12)
 for mes in range(1, 13):
     ventas_mes = ventas[meses == mes]
     montos_mes[mes - 1] = np.sum(ventas_mes[:, 1].astype(int))
-
 print("Monto total de ventas por mes:", montos_mes)
