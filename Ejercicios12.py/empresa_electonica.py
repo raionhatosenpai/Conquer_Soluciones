@@ -43,18 +43,31 @@ componentes = np.array([
 tipos, indices = np.unique(componentes[:, 1], return_inverse=True)
 max_indices = np.argmax(componentes[:, 3].astype(int), axis=0)
 tipo_max = tipos[indices[max_indices]]
-print("Tipo de componente con la puntuación más alta es: (", tipo_max, ") con una puntuación de", componentes[max_indices, 3])
+print("\nTipo de componente con la puntuación más alta es: (", tipo_max, ") con una puntuación de", componentes[max_indices, 3])
 
 # cuántos componentes se produjeron en cada mes
 fechas = np.array([fecha.split("-")[1] for fecha in componentes[:, 0]])
 meses, conteos = np.unique(fechas, return_counts=True)
-print("Cantidad de componentes producidos por mes:")
+print("\nCantidad de componentes producidos por mes:")
 for mes, conteo in zip(meses, conteos):
     print(f"Mes {mes}: {conteo} componentes")
+print("-----------------------------------------------")
 
-    # cuál es la puntuación de calidad promedio de cada tipo de componente
+# Media por tipo de componente (en todo el año)
+print("\nPuntuación promedio por tipo de componente: (en todo el año)")
+for tipo in tipos:
+    puntuaciones = componentes[componentes[:, 1] == tipo, 3].astype(float)
+    if puntuaciones.size > 0:
+        print(f"{tipo}: {np.mean(puntuaciones):.2f}")
+print("-----------------------------------------------")
+
+# media mes a mes
+for mes in meses:
+    print(f"Mes {mes}:")
     for tipo in tipos:
-        puntuaciones = componentes[componentes[:, 1] == tipo, 3].astype(int)
+        # Filtrar por mes y tipo
+        mask = (fechas == mes) & (componentes[:, 1] == tipo)
+        puntuaciones = componentes[mask, 3].astype(float)
         if puntuaciones.size > 0:
-            print(f"Puntuación promedio de {tipo}: {np.mean(puntuaciones):.2f}")
-    print("-----------------------------------------------")       
+            print(f"  {tipo}: media = {np.mean(puntuaciones):.2f}")
+    print("-----------------------------------------------")
