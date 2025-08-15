@@ -36,7 +36,6 @@ for decada in decadas[0]:
     print("\nPelículas lanzadas en cada década:", decada, " se crearon:", conteos_decadas[-1], " peliculas")
 
 # Duración promedio de cada género de película
-duracion_promedio = []
 duraciones = peliculas[:, 2]
 duracion_media = np.zeros(len(generos))
 for i in range(len(generos)):
