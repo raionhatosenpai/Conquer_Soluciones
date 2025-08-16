@@ -13,6 +13,7 @@ print("-----------------")
 for elemento in mi_tupla:
     print(elemento)
 
+print("-----------------")
 # 2º Crea una lista con tres elementos e intenta modificarla. Haz lo mismo con la tupla. ¿Cuáles son las diferencias?
 
 mi_lista = ["hola", 777, True]
