@@ -10,11 +10,12 @@
 ventas = []
 
 def agregar_venta(producto, precio):
-    ventas.append({"Producto": producto, "Precio": precio})
+    ventas.append({"Producto": producto,
+                    "Precio": precio})
 
 def mostrar_ventas():
     for venta in ventas:
-        print(f"Producto: {venta['Producto']}, Precio: {venta['Precio']}")
+        print(f"Producto: {venta['Producto']}, Precio: {venta['Precio']} EUR")
     if not ventas:
         print("No hay ventas registradas.")
 
