@@ -1,3 +1,9 @@
+#crear un script validador.py
+# que contenga una funcion validar_contrasena que reciba una cadena y
+# verifique si cumple con los requisitos mínimos de una contraseña segura
+# (por ejemplo, longitud mínima, presencia de letras mayúsculas, letras
+# minúsculas, números y caracteres especiales).
+
 import string
 
 def validar_contrasena(contrasena):

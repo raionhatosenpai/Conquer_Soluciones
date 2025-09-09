@@ -17,10 +17,16 @@ from Validar import validar_contrasena
 from Creador import generar_contrasena
 
 # Solicitar contraseña al usuario
-contrasena = input("Introduce una contraseña: ")
+def solicitar_contrasena():
+    contrasena = input("Introduce una contraseña: ")
+    validar = validar_contrasena(contrasena)
 
-while not validar_contrasena(contrasena):
-    print("La contraseña no es segura. Debe tener al menos 16 caracteres, incluir mayúsculas, minúsculas, números y caracteres especiales.")
-    contrasena = generar_contrasena()
-    print(f"Sugerencia de contraseña segura: {contrasena}")
-print("La contraseña es segura.")
+    if validar:
+      print("La contraseña es segura.")
+    else:
+      print("La contraseña no es segura.")
+      nueva_contrasena = generar_contrasena(longitud=16, incluir_mayusculas=True, incluir_minusculas=True, incluir_numeros=True, incluir_especiales=True)
+      print(f"Se sugiere la siguiente contraseña segura: {nueva_contrasena}")
+
+# Ejemplos de uso
+solicitar_contrasena()
