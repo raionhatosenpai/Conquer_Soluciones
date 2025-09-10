@@ -1,1 +1,56 @@
+# --- Entornos virtuales ---
+.venv/
+venv/
+env/
+ENV/
 
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# --- Archivos temporales ---
+*.log
+*.tmp
+*.swp
+*.bak
+*.DS_Store
+
+# --- Archivos de entorno / secretos ---
+.env
+*.secret
+*.key
+
+# --- VSCode ---
+.vscode/
+.history/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Modelos / datos pesados ---
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+models/
+checkpoints/
+data/
+datasets/
+<<<<<<< HEAD
+
+=======
+.venv/
+__pycache__/
+*.pyc
+.env
+.vscode/
+.ipynb_checkpoints/
+models/
+checkpoints/
+*.safetensors
+*.ckpt
+data/
+>>>>>>> 97f32a8 (chore: add .gitignore)
