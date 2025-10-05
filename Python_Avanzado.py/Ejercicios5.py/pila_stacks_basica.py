@@ -2,6 +2,17 @@
 # métodos para agregar elementos a la pila, quitar elementos y mostrar el 
 # contenido actual.
 
+# EL termino "stack" se usa para referirse a una estructura de datos
+# LIFO (Last In, First Out), es decir, el último elemento en entrar es 
+# el primero en salir. 
+# Ejem:
+
+# Quinto, este elemento es el último en ser agregado a la pila y el primero en ser removido.
+# Cuarto
+# Tercero
+# Segundo
+# primero, este elemento es el primero en ser agregado a la pila y el último en ser removido.
+
 class Pila:# Clase que representa una pila (stack) básica
     def __init__(self):
         self.elementos = []
@@ -32,6 +43,7 @@ class Pila:# Clase que representa una pila (stack) básica
 # llaman a sus métodos para demostrar su funcionalidad.
 pila = Pila()
 pila.mostrar()# Muestra que la pila está vacía, no es necesario, me gusta más así
+
 # Agrega varios elementos a la pila y muestra su contenido después de cada operación
 pila.agregar("primera")
 pila.mostrar()
@@ -43,6 +55,7 @@ pila.agregar("cuarta")
 pila.mostrar()
 pila.agregar("quinta")
 pila.mostrar()
+
 # Quita varios elementos de la pila y muestra su contenido después de cada operación
 pila.quitar()
 pila.mostrar()
