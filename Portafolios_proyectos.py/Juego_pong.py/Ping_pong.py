@@ -5,6 +5,7 @@ controles del usuario para las paletas de los jugadores izquierda y derecha. '''
 
 # Código base para la creacion del juego Pong, estructurado y comentado en español.
 # edificacion de un juego Pong simple usando el módulo turtle en Python.
+# Autor: raionhato
 
 import turtle
 import os
