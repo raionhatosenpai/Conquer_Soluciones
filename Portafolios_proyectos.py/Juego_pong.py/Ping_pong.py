@@ -3,6 +3,8 @@ crear los componentes del juego y detectar las colisiones de la pelota con las p
 jugadores.También puedes definir una serie de asignaciones de teclas para establecer los 
 controles del usuario para las paletas de los jugadores izquierda y derecha. '''
 
+# Código base para la creacion del juego Pong
+
 import turtle
 import os
 import random
